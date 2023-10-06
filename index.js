@@ -2,7 +2,6 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 const app = express();
-const port = 3000;
 
 const cors = require('cors')
 
@@ -40,7 +39,5 @@ app.use('/api-docs',
 swaggerUI.serve,
 swaggerUI.setup(swaggerDocument.options))
 
-app.listen(port, () => {
-    console.log("Listening on port 3000");
-})
+module.exports = app
 
